@@ -3,7 +3,7 @@ This project simulates a basic KPI dashboard using Python.
 
 ## Features
 - Revenue, cost, and profit calculation
-- KPI analysis (average/mean, max, min)
+- KPI analysis (average, max, min)
 - Data visualization using Matplotlib
 
 ## Libraries
