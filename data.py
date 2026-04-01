@@ -7,7 +7,7 @@ def load_data(filepath):
     revenue = []
     costs = []
 
-    with open(filepath, newline="") as file:
+    with open(filepath, newline="", encoding="utf-8-sig") as file:
         reader = csv.DictReader(file)
         
         for row in reader:
