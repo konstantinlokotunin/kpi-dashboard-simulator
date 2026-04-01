@@ -16,8 +16,10 @@ def calculate_growth_rate(values):
 def calculate_average(values):
     return np.mean(values)
 
-def find_max(values):
-    return np.max(values)
+def find_best_month(values, months):
+    idx = np.argmax(values)
+    return months[idx], values[idx]
 
-def find_min(values):
-    return np.min(values)
+def find_worst_month(values, months):
+    idx = np.argmin(values)
+    return months[idx], values[idx]
