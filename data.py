@@ -1,13 +1,18 @@
 # Monthly KPI data for a fictional company
 
-months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+import csv
 
-revenue = [12000, 15000, 17000, 16000, 18000, 20000]
-costs = [8000, 9000, 9500, 9200, 10000, 11000]
+def load_data(filepath):
+    months = []
+    revenue = []
+    costs = []
 
-# Store everything in a dictionary
-kpi_data = {
-    "revenue": revenue,
-    "costs": costs,
-    "months": months,
-}
+    with open(filepath, newline="") as file:
+        reader = csv.DictReader(file)
+        
+        for row in reader:
+            months.append(row["month"])
+            revenue.append(float(row["revenue"]))
+            costs.append(float(row["costs"]))
+
+    return months, revenue, costs
