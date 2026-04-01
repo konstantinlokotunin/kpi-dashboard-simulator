@@ -12,6 +12,10 @@ This project visualizes the financial performance of a fictional company using P
 
 The dataset is loaded from a CSV file, simulating real-world data ingestion workflows.
 
+## 📈 Example Output
+
+![KPI Dashboard](kpi_dashboard.png)
+
 ## Key Concepts
 
 - Data structuring using lists and dictionaries
