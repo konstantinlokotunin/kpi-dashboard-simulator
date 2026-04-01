@@ -9,16 +9,19 @@ def main():
 
     profit = calculate_profit(revenue, costs)
 
-    revenue_growth = calculate_growth_rate(revenue)
-    cost_growth = calculate_growth_rate(costs)
+    revenue_growth_lst = list(calculate_growth_rate(revenue))
+    cost_growth_lst = list(calculate_growth_rate(costs))
 
-    print("Average Revenue:", calculate_average(revenue))
-    print("Revenue Growth Rates:", revenue_growth)
+    revenue_growth = ", ".join(f"{x: .2%}" for x in revenue_growth_lst)
+    cost_growth = ", ".join(f"{x: .2%}" for x in cost_growth_lst)
+
     print("Max Revenue:", find_max(revenue))
     print("Min Revenue:", find_min(revenue))
+    print("Average Revenue:", round(calculate_average(revenue), 2))
+    print("Revenue Growth Rates:", revenue_growth)
     print("Cost Growth Rates:", cost_growth)
 
-    plot_kpis(months, revenue, costs, profit)
+    plot_kpis(months, revenue, costs, profit, revenue_growth, cost_growth)
 
 if __name__ == "__main__":
     main()
