@@ -1,4 +1,4 @@
-# KPI Dashboard Simulator
+# KPI Dashboard
 This project simulates a basic KPI dashboard using Python.
 
 ## Features
