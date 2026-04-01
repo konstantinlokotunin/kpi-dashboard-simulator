@@ -1,5 +1,5 @@
 from data import kpi_data
-from analysis import calculate_profit, calculate_growth_rate, calculate_average, find_max, find_min
+from analysis import calculate_profit, calculate_growth_rate, calculate_average, find_best_month, find_worst_month
 from visualization import plot_kpis
 
 def main():
@@ -20,8 +20,8 @@ def main():
     revenue_growth = ", ".join(f"{x: .2%}" for x in revenue_growth_lst)
     cost_growth = ", ".join(f"{x: .2%}" for x in cost_growth_lst)
 
-    print(f"Best Month: {best_month}, Profit: {best_value} USD")
-    print(f"Worst Month: {worst_month}, Profit: {worst_value} USD")
+    print(f"Best Month: {best_month} with {best_value} USD in profit.")
+    print(f"Worst Month: {worst_month} with {worst_value} USD in profit.")
     print(f"Average Revenue: {average_revenue} USD")
     print("Revenue Growth Rates:", revenue_growth)
     print("Cost Growth Rates:", cost_growth)
