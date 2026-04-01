@@ -1,11 +1,10 @@
-from data import kpi_data
+from data import load_data
 from analysis import calculate_profit, calculate_growth_rate, calculate_average, find_best_month, find_worst_month
 from visualization import plot_kpis
 
 def main():
-    months = kpi_data["months"]
-    revenue = kpi_data["revenue"]
-    costs = kpi_data["costs"]
+
+    months, revenue, costs = load_data("data.csv")
 
     profit = calculate_profit(revenue, costs)
 
