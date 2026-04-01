@@ -14,7 +14,9 @@ The dataset is loaded from a CSV file, simulating real-world data ingestion work
 
 ## 📈 Example Output
 
-![KPI Dashboard](kpi_dashboard.png)
+![KPI Dashboard](main/kpi_dashboard.png)
+
+[🔍 View full resolution](main/kpi_dashboard.png)
 
 ## Key Concepts
 
