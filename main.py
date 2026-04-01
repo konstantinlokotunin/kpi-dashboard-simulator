@@ -13,17 +13,20 @@ def main():
 
     average_revenue = round(calculate_average(revenue), 2)
 
+    revenue_growth = calculate_growth_rate(revenue) * 100
+    cost_growth = calculate_growth_rate(costs) * 100
+
     revenue_growth_lst = list(calculate_growth_rate(revenue))
     cost_growth_lst = list(calculate_growth_rate(costs))
     
-    revenue_growth = ", ".join(f"{x: .2%}" for x in revenue_growth_lst)
-    cost_growth = ", ".join(f"{x: .2%}" for x in cost_growth_lst)
+    revenue_growth_str = ", ".join(f"{x: .2f}%" for x in revenue_growth_lst)
+    cost_growth_str = ", ".join(f"{x: .2f}%" for x in cost_growth_lst)
 
     print(f"Best Month: {best_month} with {best_value} USD in profit.")
     print(f"Worst Month: {worst_month} with {worst_value} USD in profit.")
     print(f"Average Revenue: {average_revenue} USD")
-    print("Revenue Growth Rates:", revenue_growth)
-    print("Cost Growth Rates:", cost_growth)
+    print("Revenue Growth Rates:", revenue_growth_str)
+    print("Cost Growth Rates:", cost_growth_str)
 
     plot_kpis(months, revenue, costs, profit, revenue_growth, cost_growth)
 
