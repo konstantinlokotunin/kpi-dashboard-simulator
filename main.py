@@ -9,15 +9,20 @@ def main():
 
     profit = calculate_profit(revenue, costs)
 
+    best_month, best_value = find_best_month(profit, months)
+    worst_month, worst_value = find_worst_month(profit, months)
+
+    average_revenue = round(calculate_average(revenue), 2)
+
     revenue_growth_lst = list(calculate_growth_rate(revenue))
     cost_growth_lst = list(calculate_growth_rate(costs))
-
+    
     revenue_growth = ", ".join(f"{x: .2%}" for x in revenue_growth_lst)
     cost_growth = ", ".join(f"{x: .2%}" for x in cost_growth_lst)
 
-    print("Max Revenue:", find_max(revenue))
-    print("Min Revenue:", find_min(revenue))
-    print("Average Revenue:", round(calculate_average(revenue), 2))
+    print(f"Best Month: {best_month}, Profit: {best_value} USD")
+    print(f"Worst Month: {worst_month}, Profit: {worst_value} USD")
+    print(f"Average Revenue: {average_revenue} USD")
     print("Revenue Growth Rates:", revenue_growth)
     print("Cost Growth Rates:", cost_growth)
 
