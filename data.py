@@ -8,7 +8,7 @@ def load_data(filepath):
     costs = []
 
     with open(filepath, newline="", encoding="utf-8-sig") as file:
-        reader = csv.DictReader(file)
+        reader = csv.DictReader(file, delimiter=";")
         
         for row in reader:
             months.append(row["month"])
