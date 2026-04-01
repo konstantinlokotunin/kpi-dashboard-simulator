@@ -43,3 +43,4 @@ def plot_kpis(months, revenue, costs, profit, revenue_growth, cost_growth):
     plt.tight_layout()
     plt.show()
 
+    plt.savefig("kpi_dashboard.png", dpi=300, bbox_inches='tight')
