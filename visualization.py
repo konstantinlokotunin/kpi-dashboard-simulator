@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+plt.style.use("seaborn-v0_8")
+
 def plot_kpis(months, revenue, costs, profit, revenue_growth, cost_growth):
     _, axs = plt.subplots(2, 1, figsize=(2.5, 8))
 
