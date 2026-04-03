@@ -1,10 +1,13 @@
 from data import load_data
+from data_pandas import load_data_pandas
 from analysis import calculate_profit, calculate_growth_rate, calculate_average, find_best_month, find_worst_month, export_results
 from visualization import plot_kpis
 
 def main():
 
     months, revenue, costs = load_data("data.csv")
+
+    df = load_data_pandas("data.csv")
 
     profit = calculate_profit(revenue, costs)
 
@@ -33,5 +36,10 @@ def main():
     export_results("output.csv", months, revenue, costs, profit)
     print("Data exported to output.csv")
 
+    print(df.head())
+
 if __name__ == "__main__":
     main()
+
+
+
