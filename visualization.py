@@ -10,6 +10,11 @@ def on_add(sel):
     f"Month: {months[int(sel.target[0])]}\nProfit: {sel.target[1]:.1f}"
 )
 
+def onclick(event):
+    print(f"x={event.xdata}, y={event.ydata}")
+
+fig.canvas.mpl_connect("button_press_event", onclick)
+
 plt.style.use("seaborn-v0_8")
 
 def plot_kpis(months, revenue, costs, profit, revenue_growth, cost_growth):
