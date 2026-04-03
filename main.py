@@ -1,5 +1,5 @@
 from data import load_data
-from analysis import calculate_profit, calculate_growth_rate, calculate_average, find_best_month, find_worst_month
+from analysis import calculate_profit, calculate_growth_rate, calculate_average, find_best_month, find_worst_month, export_results
 from visualization import plot_kpis
 
 def main():
@@ -29,6 +29,9 @@ def main():
     print("Cost Growth Rates:", cost_growth_str)
 
     plot_kpis(months, revenue, costs, profit, revenue_growth, cost_growth)
+
+    export_results("output.csv", months, revenue, costs, profit)
+    print("Data exported to output.csv")
 
 if __name__ == "__main__":
     main()
