@@ -1,5 +1,14 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import mplcursors
+
+cursor = mplcursors.cursor(hover=True)
+
+@cursor.connect("add")
+def on_add(sel):
+    sel.annotation.set_text(
+    f"Month: {months[int(sel.target[0])]}\nProfit: {sel.target[1]:.1f}"
+)
 
 plt.style.use("seaborn-v0_8")
 
@@ -62,3 +71,5 @@ def plot_kpis(months, revenue, costs, profit, revenue_growth, cost_growth):
     
     plt.tight_layout()
     plt.show()
+
+
