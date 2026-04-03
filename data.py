@@ -15,4 +15,4 @@ def load_data(filepath):
             revenue.append(float(row["revenue"]))
             costs.append(float(row["costs"]))
 
-    return months, revenue, costs
+    return months, revenue, cost
