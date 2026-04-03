@@ -1,4 +1,5 @@
 import numpy as np
+import csv
 
 def calculate_profit(revenue, costs):
     revenue_arr = np.array(revenue)
