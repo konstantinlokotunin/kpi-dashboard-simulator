@@ -1,6 +1,15 @@
 # 📊 KPI Dashboard (Python)
 This project visualizes the financial performance of a fictional company using Python, NumPy, and Matplotlib.
 
+## Project Structure
+
+kpi-dashboard/
+│
+├── data/           # raw input data
+├── src/            # core logic (data loading, analysis, visualization)
+├── outputs/        # generated outputs
+├── main.py         # entry point
+
 ## 🔧 Features
 - Revenue, cost, and profit calculation
 - KPI statistics (average, max, min)
@@ -16,16 +25,12 @@ The dataset is loaded from a CSV file, simulating real-world data ingestion work
 
 [🔍 View full resolution](KPI_Dashboard.png)
 
-## Key Concepts
-
-- Data structuring using lists and dictionaries
-- Vectorized computations with NumPy
-- KPI analysis and business metrics
-- Data visualization and dashboard design
-
 ## Future Improvements
 
-- Add user input / dynamic data
-- Integrate SQL database
-- Enhance visualization styling
-- Add interactive dashboard features
+- Add user input/dynamic data.
+- Integrate an SQL database.
+- Enhance visualisation styling.
+- Add more interactive dashboard features.
+- Include a web dashboard (Streamlit).
+- Introduce ML forecasting.
+- Implement a data validation layer.
