@@ -23,3 +23,12 @@ def find_best_month(values, months):
 def find_worst_month(values, months):
     idx = np.argmin(values)
     return months[idx], values[idx]
+
+def export_results(filename, months, revenue, costs, profit):
+
+    with open(filename, "w", newline="") as file:
+        writer = csv.writer(file, delimiter=";")
+        writer.writerow(["Month", "Revenue", "Costs", "Profit"])
+
+        for i in range(len(months)):
+            writer.writerow([months[i], revenue[i], costs[i], profit[i]])
