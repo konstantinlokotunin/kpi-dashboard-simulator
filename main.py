@@ -36,8 +36,6 @@ def main():
 
     plot_kpis(months, revenue, costs, profit, revenue_growth, cost_growth)
 
-
-
     print(df.head())
 
 if __name__ == "__main__":
