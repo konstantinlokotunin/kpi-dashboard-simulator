@@ -45,7 +45,7 @@ kpi-dashboard/
 
 ---
 
-## ⚙️ Technologies Used
+## ⚙️ Tech Stack
 
 * Python 3.14
 * NumPy
