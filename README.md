@@ -1,4 +1,4 @@
-# 📊 KPI Dashboard (Python)
+# 📊⚙️ MetricForge  — Business KPI Analytics Dashboard (NumPy, Matplotlib)
 
 A modular Python project for analyzing and visualizing business KPI data — designed as a foundation for scalable data workflows.
 
@@ -23,7 +23,7 @@ A modular Python project for analyzing and visualizing business KPI data — des
 ## 🧱 Project Structure
 
 ```
-kpi-dashboard/
+metricforge/
 │
 ├── data/              # Raw input data
 ├── src/               # Core logic
@@ -41,7 +41,7 @@ kpi-dashboard/
 
 ## 📸 Example Output
 
-![KPI Dashboard](outputs/KPI_Dashboard.png)
+![MetricForge](outputs/KPI_Dashboard.png)
 
 ---
 
@@ -87,7 +87,6 @@ This project demonstrates:
 
 * Interactive visualizations (mplcursors / Plotly)
 * CLI interface (argparse / Typer)
-* Database integration (PostgreSQL)
 * Streamlit dashboard
 * Automated reporting pipeline
 
