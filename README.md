@@ -41,7 +41,7 @@ metricforge/
 
 ## 📸 Example Output
 
-![MetricForge](outputs/KPI_Dashboard.png)
+![MetricForge](outputs/Metric_Forge.png)
 
 ---
 
